@@ -1284,7 +1284,7 @@ MonoBehaviour:
   onChangedBackward:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1930045431122804778}
+      - m_Target: {fileID: 6727159244031774928}
         m_TargetAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
         m_MethodName: set_isOn
         m_Mode: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   onChangedForward:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2777069789302159988}
+      - m_Target: {fileID: 1880520891591356249}
         m_TargetAssemblyTypeName: UnityEngine.UI.Toggle, UnityEngine.UI
         m_MethodName: set_isOn
         m_Mode: 0
@@ -3062,7 +3062,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5951129665944406647}
   toggleTransition: 1
   graphic: {fileID: 5598656227217433212}
-  m_Group: {fileID: 1121645352}
+  m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5222,7 +5222,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199698492398971564}
   toggleTransition: 1
   graphic: {fileID: 1881092147235562579}
-  m_Group: {fileID: 1121645352}
+  m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []

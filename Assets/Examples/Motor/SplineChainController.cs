@@ -119,7 +119,22 @@ public class SplineChainController : MonoBehaviour
         float rotationAmount;
 
         //회전량 계산
-        rotationAmount = motorRotationSpeed * deltaTime;
+        if(connectedShaft != null)
+        {
+            Vector3 currentRotation = connectedShaft.eulerAngles;
+            Vector3 deltaRotation;
+            deltaRotation.x = Mathf.DeltaAngle(prevRotation.x, currentRotation.x);
+            deltaRotation.y = Mathf.DeltaAngle(prevRotation.y, currentRotation.y);
+            deltaRotation.z = Mathf.DeltaAngle(prevRotation.z, currentRotation.z);
+
+            //보정된 회전 차이값과 기어비를 내적해서 최종 회전량을 산출
+            rotationAmount = Vector3.Dot(deltaRotation, connectedGearRatio);
+            prevRotation = currentRotation;
+        }
+        else
+        {
+            rotationAmount = motorRotationSpeed * deltaTime;
+        }
 
         //모터 기어 회전
         foreach (var gear in connectedGears)
