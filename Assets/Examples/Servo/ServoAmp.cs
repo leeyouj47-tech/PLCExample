@@ -246,7 +246,7 @@ public class ServoAmp : MonoBehaviour
 
         //시작 위치를 계산
         float startPos = (ampType == AmpType.Linear) ?
-            -transform.localPosition.z * 1000f : transform.localRotation.eulerAngles.x;
+            transform.localPosition.z * 1000f : transform.localRotation.eulerAngles.x;
 
         //물리적인 위치 알아내기.
         currentPulse = PhysToPulse(startPos);
@@ -384,7 +384,7 @@ public class ServoAmp : MonoBehaviour
         {
             //시작 위치를 계산
             float startPos = (ampType == AmpType.Linear) ?
-                -transform.localPosition.z * 1000f : transform.localRotation.eulerAngles.x;
+                transform.localPosition.z * 1000f : transform.localRotation.eulerAngles.x;
 
             //물리적인 위치 알아내기.
             currentPulse = PhysToPulse(startPos);
