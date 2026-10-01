@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class RoadController : MonoBehaviour
+public class RodController : MonoBehaviour
 {
     public ConfigurableJoint joint;
     public Vector3 forwardPosition;
