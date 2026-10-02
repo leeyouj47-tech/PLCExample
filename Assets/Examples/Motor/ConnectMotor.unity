@@ -1398,7 +1398,7 @@ MonoBehaviour:
     useDoubleWord: 0
     isLocked: 1
     label: 
-    address: Y10
+    address: Y20
     description: "\uBAA8\uD130 \uC815\uD68C\uC804 \uC2E0\uD638"
     comment: "AC\uBAA8\uD130\n\uC815\uD68C\uC804\n\n"
   backwardAddress:
@@ -1406,7 +1406,7 @@ MonoBehaviour:
     useDoubleWord: 0
     isLocked: 1
     label: 
-    address: Y11
+    address: Y21
     description: "\uBAA8\uD130 \uC5ED\uD68C\uC804 \uC2E0\uD638"
     comment: "AC\uBAA8\uD130\n\uC5ED\uD68C\uC804\n\n"
   onChangedForward:
@@ -1593,6 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InverterDisplayer
   controller: {fileID: 0}
+  connector: {fileID: 1897642259}
   hzText: {fileID: 1680832324}
 --- !u!1 &1276148450
 GameObject:
@@ -1987,7 +1988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 60Hz
+  m_Text: 
 --- !u!222 &1680832325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2407,101 +2408,109 @@ MonoBehaviour:
   STF_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y22
     description: "\uC815\uD68C\uC804 \uC2E0\uD638"
     comment: 
   STR_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y23
     description: "\uC5ED\uD68C\uC804 \uC2E0\uD638"
     comment: 
   MRS_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y24
     description: "\uBE44\uC0C1\uC815\uC9C0 \uC2E0\uD638"
     comment: 
   RST_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y25
     description: "\uB9AC\uC14B \uC2E0\uD638"
     comment: 
   RUN_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: X08
     description: "\uC6B4\uD589\uC911 \uD53C\uB4DC\uBC31 \uC2E0\uD638"
     comment: 
   SU_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: X09
     description: "\uBAA9\uD45CHz \uB3C4\uB2EC \uC2E0\uD638"
     comment: 
   ALERT_Address:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: X0A
     description: "\uACE0\uC7A5 \uC2E0\uD638"
     comment: 
   poleCount: 4
-  maxFrequency: 60
-  maxRPM: 1800
+  maxFrequency: 120
+  maxRPM: 3600
   accelTime: 1
   decelTime: 1
-  useStep: 0
+  useStep: 1
   RL_Adrress:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y26
     description: "\uC800\uB2E8 \uC18D\uB3C4 \uBA85\uB839 \uC2E0\uD638"
     comment: 
   RM_Adrress:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y27
     description: "\uC911\uB2E8 \uC18D\uB3C4 \uBA85\uB839 \uC2E0\uD638"
     comment: 
   RH_Adrress:
     useDevice: 1
     useDoubleWord: 0
-    isLocked: 0
+    isLocked: 1
     label: 
-    address: 
+    address: Y28
     description: "\uACE0\uB2E8 \uC18D\uB3C4 \uBA85\uB839 \uC2E0\uD638"
     comment: 
   stepFrequencies:
   - 0
   - 10
-  - 30
-  - 0
+  - 20
+  - 40
   - 60
-  - 0
-  - 0
-  - 0
-  useAnalogInput: 0
+  - 80
+  - 100
+  - 120
+  useAnalogInput: 1
   analogMaxResolution: 4000
-  targetHz: 0
+  analogAddress:
+    useDevice: 1
+    useDoubleWord: 0
+    isLocked: 1
+    label: 
+    address: D100
+    description: "\uC544\uB0A0\uB85C\uADF8 \uBA85\uB839 \uC2E0\uD638"
+    comment: "\uC778\uBC84\uD130\n\uC544\uB0A0\uB85C\uADF8\n\n"
+  targetHz: 30
   currentHz: 0
   currentRPM: 0
   onChangedRun:
@@ -2551,10 +2560,10 @@ ConfigurableJoint:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897642247}
   serializedVersion: 4
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1897642252}
   m_ConnectedArticulationBody: {fileID: 0}
-  m_Anchor: {x: 0, y: 0.0045000003, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Anchor: {x: 0, y: 0, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
@@ -5846,6 +5855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InverterDisplayer
   controller: {fileID: 0}
+  connector: {fileID: 0}
   hzText: {fileID: 1680832324}
 --- !u!4 &9139320896808627344
 Transform:
