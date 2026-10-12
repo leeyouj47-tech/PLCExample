@@ -12,7 +12,7 @@ public class AGVController : MonoBehaviour
 
     public float speed = 1f;
     public float rotateSpeed = 90f;
-    public bool isRotating = false;
+    private bool isRotating = false;
     public UnityEvent onCompleteMove;
 
     void Start()
